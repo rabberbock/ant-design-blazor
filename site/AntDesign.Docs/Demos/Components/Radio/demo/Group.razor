@@ -1,16 +1,16 @@
 <div>
-    <RadioGroup @bind-Value="@_value" >
-        <Radio Value="1">A</Radio>
-        <Radio Value="2">B</Radio>
-        <Radio Value="3">C</Radio>
-        <Radio Value="4">D</Radio>
+    <RadioGroup TValue="int?" @bind-Value="@_value" >
+        <Radio TValue="int?" Value="1">A</Radio>
+        <Radio TValue="int?" Value="2">B</Radio>
+        <Radio TValue="int?" Value="3">C</Radio>
+        <Radio TValue="int?" Value="4">D</Radio>
     </RadioGroup>
-    <button @onclick="@(() => _value = 10)">
+    <button @onclick="@(() => _value = null)">
         Change Value
     </button>
 </div>
 @code
  {
 
-    int _value = 1;
+    int? _value = null;
 }
